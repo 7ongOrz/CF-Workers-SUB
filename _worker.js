@@ -156,19 +156,19 @@ export default {
 					headers: { 
 						"content-type": "text/plain; charset=utf-8",
 						"Profile-Update-Interval": `${SUBUpdateTime}`,
-						"Subscription-Userinfo": `upload=${UD}; download=${UD}; total=${total}; expire=${expire}`,
+						// "Subscription-Userinfo": `upload=${UD}; download=${UD}; total=${total}; expire=${expire}`,
 					}
 				});
 			} else if (订阅格式 == 'clash'){
-				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=clash&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
+				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=clash&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=false&list=true&tfo=false&scv=false&fdn=false&sort=false&udp=true&new_name=true`;
 			} else if (订阅格式 == 'singbox'){
-				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=singbox&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
+				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=singbox&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=false&list=true&tfo=false&scv=false&fdn=false&sort=false&udp=true&new_name=true`;
 			} else if (订阅格式 == 'surge'){
-				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=surge&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
+				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=surge&ver=5&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=false&list=true&tfo=false&scv=false&fdn=false&sort=false&udp=true&new_name=true`;
 			} else if (订阅格式 == 'quanx'){
-				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=quanx&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&udp=true`;
+				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=quanx&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=false&list=true&tfo=false&scv=false&fdn=false&sort=false&udp=true`;
 			} else if (订阅格式 == 'loon'){
-				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=loon&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false`;
+				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=loon&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=false&list=true&tfo=false&scv=false&fdn=false&sort=false&udp=true`;
 			}
 			//console.log(订阅转换URL);
 			try {
@@ -179,7 +179,7 @@ export default {
 						headers: { 
 							"content-type": "text/plain; charset=utf-8",
 							"Profile-Update-Interval": `${SUBUpdateTime}`,
-							"Subscription-Userinfo": `upload=${UD}; download=${UD}; total=${total}; expire=${expire}`,
+							// "Subscription-Userinfo": `upload=${UD}; download=${UD}; total=${total}; expire=${expire}`,
 						}
 					});
 					//throw new Error(`Error fetching subconverterUrl: ${subconverterResponse.status} ${subconverterResponse.statusText}`);
@@ -191,7 +191,7 @@ export default {
 						"Content-Disposition": `attachment; filename*=utf-8''${encodeURIComponent(FileName)}; filename=${FileName}`,
 						"content-type": "text/plain; charset=utf-8",
 						"Profile-Update-Interval": `${SUBUpdateTime}`,
-						"Subscription-Userinfo": `upload=${UD}; download=${UD}; total=${total}; expire=${expire}`,
+						// "Subscription-Userinfo": `upload=${UD}; download=${UD}; total=${total}; expire=${expire}`,
 
 					},
 				});
@@ -200,7 +200,7 @@ export default {
 					headers: { 
 						"content-type": "text/plain; charset=utf-8",
 						"Profile-Update-Interval": `${SUBUpdateTime}`,
-						"Subscription-Userinfo": `upload=${UD}; download=${UD}; total=${total}; expire=${expire}`,
+						// "Subscription-Userinfo": `upload=${UD}; download=${UD}; total=${total}; expire=${expire}`,
 					}
 				});
 			}
